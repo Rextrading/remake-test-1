@@ -1,0 +1,37 @@
+.bottom-nav{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+
+  .tab-btns{
+     padding: 1rem 0.5rem;
+     display: flex;
+     justify-content: space-between;
+
+     .tab{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #999;
+        transition: 0.3s ease;
+
+        &:is(:hover, .active){
+            color: #000;
+        }
+        
+        &.profile{
+          img{
+            width: 2rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            overflow: hidden;
+            object-fit: cover;
+          }
+        }
+     }
+  }
+}

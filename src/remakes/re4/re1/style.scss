@@ -1,0 +1,163 @@
+:root {
+  --primary-blue: rgb(39, 39, 246);
+  --primary-blue-light: rgb(107, 107, 254);
+  --bg-color-1: #fff;
+  --bg-color-2: #fcfcfc;
+  --bg-color-3: #eaeaea;
+  --text-color: #000;
+  --text-color-3: #7a7a7a;
+  --text-color-light: #fff;
+  --shadow-1: #eee;
+  --shadow-2: #bbb;
+  --border-1: #cfcfcf;
+  --border-2: #dedede;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.clans-page {
+  width: 100vw;
+  // height: 100vh;
+  background-color: var(--bg-color-2);
+  padding-inline: 0.8rem;
+
+  .back-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: var(--bg-color-1);
+    transition: 0.2s ease;
+    font-size: 1rem;
+    box-shadow: 0 0 5px var(--shadow-2);
+    z-index: 5;
+
+    &:hover {
+      box-shadow: 0 0 5px var(--shadow-2);
+    }
+  }
+
+  .title-container {
+    position: relative;
+    padding-top: 4rem;
+
+    .top-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .add-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1rem;
+        border-radius: 1.5rem;
+        color: var(--text-color-light);
+        cursor: pointer;
+        background: linear-gradient(
+          130deg,
+          var(--primary-blue),
+          var(--primary-blue),
+          var(--primary-blue-light)
+        );
+
+        &:hover {
+          filter: contrast(160%);
+        }
+      }
+    }
+    // end of top-section
+
+    .contact-group {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      background-color: var(--bg-color-3);
+      padding: 3px;
+      border-radius: 5px;
+
+      button {
+        width: 100%;
+        border: none;
+        padding-block: 0.7rem;
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: transparent;
+        cursor: pointer;
+
+        &.active {
+          background-color: var(--bg-color-1);
+        }
+      }
+    }
+    // end of contact-group
+  }
+  .search-container {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 1;
+      padding: 0.3rem;
+      border: 2px solid var(--border-1);
+      border-radius: 0.5rem;
+      background-color: var(--bg-color-1);
+
+      .icon {
+        font-size: 1.4rem;
+
+        &:hover {
+          color: var(--primary-blue);
+          cursor: pointer;
+        }
+      }
+
+      input {
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+      }
+    }
+
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border: 2px solid var(--border-1);
+      border-radius: 0.5rem;
+      background-color: var(--bg-color-1);
+
+      &:hover {
+        color: var(--primary-blue);
+      }
+    }
+  }
+  // end of search-container
+}

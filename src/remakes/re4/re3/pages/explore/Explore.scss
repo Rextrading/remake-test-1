@@ -1,0 +1,11 @@
+.explore-page{
+  width: 100%;
+  scroll-snap-type: inline mandatory;
+  overflow-x: auto;
+
+  .scroll-wrapper{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+  }
+}

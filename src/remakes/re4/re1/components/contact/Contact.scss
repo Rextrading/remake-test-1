@@ -1,0 +1,103 @@
+.contact {
+  background-color: var(--bg-color-1);
+  box-shadow: 0 0 5px var(--shadow-2);
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+
+  .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem;
+
+    .user-details {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .user-img {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40%;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          //clip-path: polygon(50% 0%, 100% 28%, 100% 75%, 50% 100%, 0% 75%, 0% 28%);
+        }
+      }
+
+      .name-email {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+
+        .name:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+
+        .email {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: var(--text-color-3);
+        }
+      }
+    }
+    .more-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color-3);
+      padding: 0.5rem;
+      border-radius: 50%;
+      border: 1px solid var(--bg-color-1);
+
+      &:hover {
+        border-color: var(--border-2);
+        cursor: pointer;
+      }
+    }
+  }
+  // end of top-section
+
+  hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: var(--border-2);
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.6rem;
+
+    .activity {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-color-3);
+      font-size: 0.8rem;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .info {
+      color: var(--text-color);
+    }
+
+    .date {
+      color: var(--text-color-3);
+    }
+  }
+}

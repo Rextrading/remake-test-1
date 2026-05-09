@@ -1,0 +1,24 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html{
+ scroll-behaviour: smooth;
+}
+body{
+ font-family: sans-serif;
+ //height: 100vh;
+ background-color: #fff;
+}
+
+.container{
+  padding: 0 1rem;
+}
+
+.scrollbar-item{
+  width: 100vw;
+  scroll-snap-align: start;
+  //background: blue;
+}

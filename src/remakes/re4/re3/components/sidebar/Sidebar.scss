@@ -1,0 +1,48 @@
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 3rem);
+  height: 100vh;
+  z-index: 5;
+  display: none;
+
+  &.active{
+    display: flex;
+  }
+
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000a;
+    animation: 0.25s Apear ease-out;
+
+    @keyframes Apear{
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+  }
+
+  .sidebar-content{
+    width: 100%;
+    background: #fff;
+    z-index: 6;
+    animation: 0.25s SlideIn ease-out;
+
+    @keyframes SlideIn{
+      0%{
+        transform: translateX(-100%);
+      }
+      100%{
+        transform: translateX(0);
+      }
+    }
+  }
+}

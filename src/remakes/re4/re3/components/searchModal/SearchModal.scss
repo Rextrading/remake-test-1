@@ -1,0 +1,104 @@
+.search-modal{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: none;
+   flex-direction: column;
+
+   &.active{
+      display: flex;
+   }
+
+   .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fffd;
+      z-index: 2;
+      pointer-events: all;
+      visibility: visible;
+      animation: .3s comeUp ease;
+
+      @keyframes comeUp{
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+
+      &.hidden{
+        pointer-events: none;
+        visibility: hidden;
+      }
+   }
+
+   .top-bar{
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     padding: 1rem;
+     background-color: #fff;
+     z-index: 4;
+     animation: .3s slideIn ease;
+
+     @keyframes slideIn{
+       0%{
+         transform: translateY(-100%);
+       }
+       100%{
+         transform: translateY(0);
+       }
+     }
+
+     .icon{
+       display: flex;
+       font-size: 1.3rem;
+
+       &.close-btn{
+         border: none;
+         outline: none;
+         background: transparent;
+
+       }
+     }
+
+     .search-bar{
+       flex: 1;
+       display: flex;
+       align-items: center;
+       gap: 0.5rem;
+       background: #eee;
+       border-radius: 0.5rem;
+       padding: 0 0.5rem;
+       color: #999;
+
+       input{
+        width: 100%;
+        padding: 0.6rem 0;
+        background: transparent;
+        border: none;
+        font-size: 1.1rem;
+        outline: none;
+       }
+     }
+   }
+   /* end of top-bar */
+
+   .search-results{
+     flex: 1;
+     background: #fff;
+     display: none;
+     z-index: 4;
+
+     &.active{
+       display: flex;
+
+     }
+   }
+}
